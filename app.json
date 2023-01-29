@@ -1,6 +1,6 @@
 {
-  "name": "Adarsh-",
-  "description": "A Pyrogram Telegram bot to Stream Telegram files to web.",
+  "name": "DX STREAMER BOT",
+  "description": "A Pyrogram Telegram bot to Stream And Download.",
   "keywords": [
       "telegram",
       "stream",
@@ -13,10 +13,10 @@
       "media",
       "bot"
     ],
-  "repository": "https://github.com/LazyDeveloperr/Lazy-Streamer-BOT",
+  "repository": "https://github.com/DX-MODS/DxStreamerBot",
   "success_url": "/",
-  "logo": "https://telegra.ph/file/f2c253c5b0b747042cf4c.png",
-  "website": "http://t.me/LazyDeveloper",
+  "logo": "https://telegra.ph/file/93382b91fe810ba981de8.jpg",
+  "website": "http://t.me/dxziyan",
   "env": {
       "ENV": {
           "description": "Set this to True if you don't want to crash the bot",
@@ -94,7 +94,7 @@
           "required": false
       },
       "name": {
-          "description": " Session Name for Bot [ Add adarsh-goel]",
+          "description": " Session Name for Bot [ Add DxStreamerBot]",
           "value": "File-To-Link",
           "required": false
       }
