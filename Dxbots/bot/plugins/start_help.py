@@ -1,14 +1,14 @@
-from Adarsh.bot import StreamBot
-from Adarsh.vars import Var
+from Dxbots.bot import DxStreamBot
+from Dxbots.vars import Var
 import logging
 logger = logging.getLogger(__name__)
-from Adarsh.bot.plugins.stream import MY_PASS
-from Adarsh.utils.human_readable import humanbytes
-from Adarsh.utils.database import Database
+from Dxbots.bot.plugins.stream import MY_PASS
+from Dxbots.utils.human_readable import humanbytes
+from Dxbots.utils.database import Database
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
-from Adarsh.utils.file_properties import get_name, get_hash, get_media_file_size
+from Dxbots.utils.file_properties import get_name, get_hash, get_media_file_size
 db = Database(Var.DATABASE_URL, Var.name)
 from pyrogram.types import ReplyKeyboardMarkup
 
@@ -33,7 +33,7 @@ else:
 
             
             
-@StreamBot.on_message((filters.command("start") | filters.regex('start⚡️')) & filters.private )
+@DxStreamBot.on_message((filters.command("start") | filters.regex('start⚡️')) & filters.private )
 async def start(b, m):
     if not await db.is_user_exist(m.from_user.id):
         await db.add_user(m.from_user.id)
@@ -52,7 +52,7 @@ async def start(b, m):
                 )
                 return
         except UserNotParticipant:
-             await StreamBot.send_photo(
+             await DxStreamBot.send_photo(
                 chat_id=m.chat.id,
                 photo="https://telegra.ph/file/93382b91fe810ba981de8.jpg",
                 caption="<i>𝙹𝙾𝙸𝙽 CHANNEL 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴🔐</i>",
@@ -73,14 +73,14 @@ async def start(b, m):
                 
                 disable_web_page_preview=True)
             return
-    await StreamBot.send_photo(
+    await DxStreamBot.send_photo(
         chat_id=m.chat.id,
         photo ="https://telegra.ph/file/93382b91fe810ba981de8.jpg",
         caption =f'Hi {m.from_user.mention(style="md")}!,\nI am Telegram File to Link Generator Bot with Channel support.\nSend me any file and get a direct download link and streamable link.!',
         reply_markup=buttonz)
 
 
-@StreamBot.on_message((filters.command("help") | filters.regex('help📚')) & filters.private )
+@DxStreamBot.on_message((filters.command("help") | filters.regex('help📚')) & filters.private )
 async def help_handler(bot, message):
     if not await db.is_user_exist(message.from_user.id):
         await db.add_user(message.from_user.id)
@@ -100,7 +100,7 @@ async def help_handler(bot, message):
                 )
                 return
         except UserNotParticipant:
-            await StreamBot.send_photo(
+            await DxStreamBot.send_photo(
                 chat_id=message.chat.id,
                 photo="https://telegra.ph/file/93382b91fe810ba981de8.jpg",
                 Caption="**𝙹𝙾𝙸𝙽 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙶𝚁𝙾𝚄𝙿 𝚃𝙾 𝚄𝚂𝙴 ᴛʜɪs Bᴏᴛ!**\n\n__Dᴜᴇ ᴛᴏ Oᴠᴇʀʟᴏᴀᴅ, Oɴʟʏ Cʜᴀɴɴᴇʟ Sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴛʜᴇ Bᴏᴛ!__",
