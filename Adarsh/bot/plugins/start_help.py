@@ -1,4 +1,3 @@
-# (c) adarsh-goel 
 from Adarsh.bot import StreamBot
 from Adarsh.vars import Var
 import logging
