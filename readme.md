@@ -1,25 +1,14 @@
 <h1 align="center"></h1>
 <p align="center"> 
-  <img src="https://telegra.ph/file/f2c253c5b0b747042cf4c.png" alt="Lazy Streamer LOGO" width="650">
+  <img src="https://telegra.ph/file/93382b91fe810ba981de8.jpg" alt="Lazy Streamer LOGO" width="650">
   </a>
   
  <p align="center">
     A Telegram bot to turn all media and documents files to instant direct download and stream link .
     <br />
    </strong></a>
-    <br />
-    <a href="https://github.com/LazyDeveloperr/Lazy-Streamer-BOT/issues">Report a Bug</a>
-    |
-    <a href="https://github.com/LazyDeveloperr/Lazy-Streamer-BOT/issues">Request Feature</a>
-  </p>
 
-
-<hr>
-
-## Please Follow me so you know whenever I release a new Project!❤️‍🔥
-### Incase you are having trouble deploying bot you may hire developer we have reasonable rates [click here](https://t.me/LazyPrincessSupport)
-
-## 🍁 About This Bot :
+### 🍁 About This Bot :
 
 ![streamingfilestreambot-professional-live_1](https://user-images.githubusercontent.com/88939380/137127129-a86fc939-2931-4c66-b6f6-b57711a9eab7.png)
 
@@ -80,12 +69,12 @@ then goto the <a href="#mandatory-vars">variables tab</a> for more info on setti
 
 
 ```py
-git clone https://github.com/LazyDeveloperr/Lazy-Streamer-BOT
-cd filestreambot-pro
+git clone https://github.com/DX-MODS/DxStreamerBot
+cd DxStreamerBot
 virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
 pip install -r requirements.txt
-python3 -m Adarsh
+python3 -m Dxbots
 ```
 
 and to stop the whole bot,
@@ -163,6 +152,5 @@ To get an instant stream link, just forward any media to the bot and boom, its f
 Bot also Supported with Channels. Just add bot Channel as Admin. If any new file comes in Channel it will edit it with **Get Download Link** Button. </details>
 
 ### Credits : 
-- ❤️ Thank You sir [LazyDeveloper](https://github.com/LazyDeveloperr) for helping us in this journey. ❤️
+- A Project Done By❤️ [ZIYAN](https://github.com/DX-MODS) for helping us in this journey. ❤️
 - [Adarsh-Goel](https://github.com/adarsh-goel)
-- And Everyone In This Journey !
