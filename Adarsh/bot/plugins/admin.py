@@ -1,4 +1,3 @@
-# (c) @adarsh-goel
 import os
 import time
 import string
@@ -6,16 +5,16 @@ import random
 import asyncio
 import aiofiles
 import datetime
-from Adarsh.utils.broadcast_helper import send_msg
-from Adarsh.utils.database import Database
-from Adarsh.bot import StreamBot
-from Adarsh.vars import Var
+from Dxbots.utils.broadcast_helper import send_msg
+from Dxbots.utils.database import Database
+from Dxbots.bot import DxStreamBot
+from Dxbots.vars import Var
 from pyrogram import filters, Client
 from pyrogram.types import Message
 db = Database(Var.DATABASE_URL, Var.name)
 Broadcast_IDs = {}
 
-@StreamBot.on_message(filters.command("users") & filters.private )
+@DxStreamBot.on_message(filters.command("users") & filters.private )
 async def sts(c: Client, m: Message):
     user_id=m.from_user.id
     if user_id in Var.OWNER_ID:
@@ -23,7 +22,7 @@ async def sts(c: Client, m: Message):
         await m.reply_text(text=f"Total Users in DB: {total_users}", quote=True)
         
         
-@StreamBot.on_message(filters.command("broadcast") & filters.private  & filters.user(list(Var.OWNER_ID)))
+@DxStreamBot.on_message(filters.command("broadcast") & filters.private  & filters.user(list(Var.OWNER_ID)))
 async def broadcast_(c, m):
     user_id=m.from_user.id
     out = await m.reply_text(
