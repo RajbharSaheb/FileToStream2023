@@ -1,15 +1,13 @@
-# (c) adarsh-goel
-
 import asyncio
 import logging
 from ..vars import Var
 from pyrogram import Client
-from Adarsh.utils.config_parser import TokenParser
-from . import multi_clients, work_loads, StreamBot
+from Dxbots.utils.config_parser import TokenParser
+from . import multi_clients, work_loads, DxStreamBot
 
 
 async def initialize_clients():
-    multi_clients[0] = StreamBot
+    multi_clients[0] = DxStreamBot
     work_loads[0] = 0
     all_tokens = TokenParser().parse_from_env()
     if not all_tokens:
