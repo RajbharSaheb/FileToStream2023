@@ -1,4 +1,3 @@
-# (c) adarsh-goel
 import os
 import sys
 import glob
@@ -7,12 +6,12 @@ import logging
 import importlib
 from pathlib import Path
 from pyrogram import idle
-from .bot import StreamBot
+from .bot import DxStreamBot
 from .vars import Var
 from aiohttp import web
 from .server import web_server
 from .utils.keepalive import ping_server
-from Adarsh.bot.clients import initialize_clients
+from Dxbots.bot.clients import initialize_clients
 
 logging.basicConfig(
     level=logging.INFO,
@@ -22,17 +21,17 @@ logging.getLogger("aiohttp").setLevel(logging.ERROR)
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
 logging.getLogger("aiohttp.web").setLevel(logging.ERROR)
 
-ppath = "Adarsh/bot/plugins/*.py"
+ppath = "Dxbots/bot/plugins/*.py"
 files = glob.glob(ppath)
-StreamBot.start()
+DxStreamBot.start()
 loop = asyncio.get_event_loop()
 
 
 async def start_services():
     print('\n')
     print('------------------- Initalizing Telegram Bot -------------------')
-    bot_info = await StreamBot.get_me()
-    StreamBot.username = bot_info.username
+    bot_info = await DxStreamBot.get_me()
+    DxStreamBot.username = bot_info.username
     print("------------------------------ DONE ------------------------------")
     print()
     print(
@@ -46,12 +45,12 @@ async def start_services():
         with open(name) as a:
             patt = Path(a.name)
             plugin_name = patt.stem.replace(".py", "")
-            plugins_dir = Path(f"Adarsh/bot/plugins/{plugin_name}.py")
+            plugins_dir = Path(f"Dxbots/bot/plugins/{plugin_name}.py")
             import_path = ".plugins.{}".format(plugin_name)
             spec = importlib.util.spec_from_file_location(import_path, plugins_dir)
             load = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(load)
-            sys.modules["Adarsh.bot.plugins." + plugin_name] = load
+            sys.modules["Dxbots.bot.plugins." + plugin_name] = load
             print("Imported => " + plugin_name)
     if Var.ON_HEROKU:
         print("------------------ Starting Keep Alive Service ------------------")
@@ -66,17 +65,17 @@ async def start_services():
     print('\n')
     print('---------------------------------------------------------------------------------------------------------')
     print('---------------------------------------------------------------------------------------------------------')
-    print(' follow me for more such exciting bots! https://github.com/LazyDeveloperr/Lazy-Streamer-BOT')
+    print(' follow me for more such exciting bots! https://github.com/DX-MODS/DxStreamerBot')
     print('---------------------------------------------------------------------------------------------------------')
     print('\n')
     print('----------------------- Service Started -----------------------------------------------------------------')
-    print('                        bot =>> {}'.format((await StreamBot.get_me()).first_name))
+    print('                        bot =>> {}'.format((await DxStreamBot.get_me()).first_name))
     print('                        server ip =>> {}:{}'.format(bind_address, Var.PORT))
     print('                        Owner =>> {}'.format((Var.OWNER_USERNAME)))
     if Var.ON_HEROKU:
         print('                        app runnng on =>> {}'.format(Var.FQDN))
     print('---------------------------------------------------------------------------------------------------------')
-    print('Give a star to my repo https://github.com/LazyDeveloperr/Lazy-Streamer-BOT  also follow me for new bots')
+    print('Give a star to my repo https://github.com/DX-MODS/DxStreamerBot  also follow me for new bots')
     print('---------------------------------------------------------------------------------------------------------')
     await idle()
 
