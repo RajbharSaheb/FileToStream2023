@@ -1,10 +1,9 @@
-# (c) adarsh-goel
 from pyrogram import Client
 import pyromod.listen
 from ..vars import Var
 from os import getcwd
 
-StreamBot = Client(
+DxStreamBot = Client(
     name='Web Streamer',
     api_id=Var.API_ID,
     api_hash=Var.API_HASH,
