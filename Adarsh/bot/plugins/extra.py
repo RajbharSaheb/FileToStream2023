@@ -1,28 +1,28 @@
-from Adarsh.bot import StreamBot
+from Dxbots.bot import DxStreamBot
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram import filters
 import time
 import shutil, psutil
 from utils_bot import *
-from Adarsh import StartTime
+from Dxbots import StartTime
 
 
 START_TEXT = """ Your Telegram DC Is : `{}`  """
 
 
-@StreamBot.on_message(filters.regex("maintainers😎"))
+@DxStreamBot.on_message(filters.regex("maintainers😎"))
 async def maintainers(b,m):
     try:
        await b.send_message(chat_id=m.chat.id,text="HELLO",quote=True)
     except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="I am Made By [LazyDeveloper](https://t.me/mRiderDM)",
+                    text="I am Made By [ZIYAN](https://t.me/dxziyan)",
                     
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("Owner💻", url=f"https://t.me/mRiderDM")
+                                InlineKeyboardButton("Owner💻", url=f"https://t.me/dxziyan")
                             ]
                         ]
                     ),
@@ -30,7 +30,7 @@ async def maintainers(b,m):
                     disable_web_page_preview=True)
             
          
-@StreamBot.on_message(filters.regex("Subscribe ❤️"))
+@DxStreamBot.on_message(filters.regex("Subscribe ❤️"))
 async def follow_user(b,m):
     try:
        await b.send_message(chat_id=m.chat.id,text="HELLO",quote=True)
@@ -42,7 +42,7 @@ async def follow_user(b,m):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("Subscribe ❤️", url=f"https://youtube.com/@LazyDeveloperr")
+                                InlineKeyboardButton("Subscribe ❤️", url=f"https://youtube.com/@DX-MODS")
                             ]
                         ]
                     ),
@@ -50,7 +50,7 @@ async def follow_user(b,m):
                     disable_web_page_preview=True)
         
 
-@StreamBot.on_message(filters.regex("DC"))
+@DxStreamBot.on_message(filters.regex("DC"))
 async def start(bot, update):
     text = START_TEXT.format(update.from_user.dc_id)
     await update.reply_text(
@@ -61,7 +61,7 @@ async def start(bot, update):
 
     
     
-@StreamBot.on_message(filters.command("list"))
+@DxStreamBot.on_message(filters.command("list"))
 async def list(l, m):
     LIST_MSG = "Hi! {} Here is a list of all my commands \n \n 1 . `start⚡️` \n 2. `help📚` \n 3. `login🔑` \n 4.`Subscribe ❤️` \n 5. `ping📡` \n 6. `status📊` \n 7. `DC` this tells your telegram dc \n 8. `maintainers😎` "
     await l.send_message(chat_id = m.chat.id,
@@ -70,7 +70,7 @@ async def list(l, m):
     )
     
     
-@StreamBot.on_message(filters.regex("ping📡"))
+@DxStreamBot.on_message(filters.regex("ping📡"))
 async def ping(b, m):
     start_t = time.time()
     ag = await m.reply_text("....")
@@ -81,7 +81,7 @@ async def ping(b, m):
     
     
     
-@StreamBot.on_message(filters.private & filters.regex("status📊"))
+@DxStreamBot.on_message(filters.private & filters.regex("status📊"))
 async def stats(bot, update):
   currentTime = readable_time((time.time() - StartTime))
   total, used, free = shutil.disk_usage('.')
