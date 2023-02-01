@@ -22,23 +22,33 @@
 
 
 #### ♢ Click on This Drop-down and get more details
+
+<details><summary>Deploy To Koyeb</summary>
+<p>
 <br>
-<details>
-  <summary><b>Deploy on Heroku:</b></summary>
+<a href="https://app.koyeb.com/apps/deploy?type=git&repository=github.com/DX-MODS/DxStreamerBot&env[PORT]&env[API_ID]&env[API_HASH]&env[BOT_TOKEN]&env[BIN_CHANNEL]&env[DATABASE_URL]&env[UPDATES_CHANNEL]&env[WORKERS]=4&env[OWNER_USERNAME]&env[OWNER_ID]&env[APP_NAME]&run_command=python -m Dxbots &branch=main&name=dxstreamerbot">
+  <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="Deploy">
+</a>
+</p>
+</details>
 
-
-1. Fork This Repo
-2. Click on the button to Deploy and follow steps
-
-<h4> So Follow Above Steps 👆 and then deploy other wise bot won't work</h4>
-
-Press the below button to Fast deploy on Heroku/Raiwlay
-Either you could locally host or deploy on [Heroku](https://heroku.com)
-### 💜 Heroku
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy/)
-
+<details><summary>Deploy To Railway</summary>
+<p>
 <br>
+<a href="">
+  <img src="https://railway.app/button.svg" alt="Deploy">
+</a>
+</p>
+</details>
+
+<details><summary>Deploy To Heroku</summary>
+<p>
+<br>
+<a href="https://heroku.com/deploy?template=https://github.com/DX-MODS/DxStreamerBot">
+  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
+</a>
+</p>
+</details>
 
 
 then goto the <a href="#mandatory-vars">variables tab</a> for more info on setting up environmental variables. </details>
