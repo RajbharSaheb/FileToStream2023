@@ -50,9 +50,6 @@
 </p>
 </details>
 
-
-then goto the <a href="#mandatory-vars">variables tab</a> for more info on setting up environmental variables. </details>
-
 <details>
   <summary><b>Features:</b></summary>
   
