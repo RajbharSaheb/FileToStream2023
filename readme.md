@@ -35,7 +35,7 @@
 <details><summary>Deploy To Railway</summary>
 <p>
 <br>
-<a href="">
+<a href="https://railway.app/new/template/wDcfYA?referralCode=DX-MODS">
   <img src="https://railway.app/button.svg" alt="Deploy">
 </a>
 </p>
