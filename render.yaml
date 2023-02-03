@@ -22,4 +22,6 @@ services:
         sync: false
       - key: OWNER_ID
         sync: false
+      - key: DATABASE_URL
+        sync: false
     autoDeploy: false 
