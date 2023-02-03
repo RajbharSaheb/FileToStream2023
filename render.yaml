@@ -24,4 +24,6 @@ services:
         sync: false
       - key: DATABASE_URL
         sync: false
+      - key: FQDN
+        sync: false
     autoDeploy: false 
