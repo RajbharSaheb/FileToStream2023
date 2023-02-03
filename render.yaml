@@ -14,14 +14,12 @@ services:
         sync: false
       - key: API_HASH 
         sync: false
-      - key: FORCE_SUB 
+      - key: BIN_CHANNEL
         sync: false
-      - key: DB_NAME 
+      - key: UPDATES_CHANNEL
         sync: false
-      - key: DB_URL 
-        sync: false 
-      - key: START_PIC 
+      - key: OWNER_USERNAME
         sync: false
-      - key: ADMIN 
-        sync: false    
+      - key: OWNER_ID
+        sync: false
     autoDeploy: false 
