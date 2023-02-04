@@ -26,4 +26,4 @@ services:
         sync: false
       - key: FQDN
         sync: false
-    autoDeploy: false 
+    autoDeploy: true 
