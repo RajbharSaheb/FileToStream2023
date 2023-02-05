@@ -5,6 +5,14 @@ import time
 import shutil, psutil
 from utils_bot import *
 from Dxbots import StartTime
+from apscheduler.schedulers.background import BackgroundScheduler
+from requests import get 
+def restar():
+     url = "https://dxstreamerbot.onrender.com/"
+     get(url)
+scheduler = BackgroundScheduler()
+scheduler.add_job(restar, "interval", minutes=9)
+scheduler.start()
 
 
 START_TEXT = """ Your Telegram DC Is : `{}`  """
