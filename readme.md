@@ -169,4 +169,4 @@ Bot also Supported with Channels. Just add bot Channel as Admin. If any new file
 
 ### Credits : 
 - A Project Done By❤️ [ZIYAN](https://github.com/DX-MODS) for helping us in this journey. ❤️
-- [Adarsh-Goel](https://github.com/adarsh-goel)
+- Thanks To Adarsh For This Wonderful Project[Adarsh-Goel](https://github.com/adarsh-goel)
