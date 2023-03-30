@@ -1,5 +1,4 @@
 pyrogram==2.0.38
-git+https://github.com/agronholm/apscheduler
 tgcrypto<=1.2.3
 aiohttp<=3.8.1
 python-dotenv<=0.20.0
