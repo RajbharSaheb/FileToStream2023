@@ -1,5 +1,5 @@
 {
-  "name": "DX STREAMER BOT",
+  "name": "FileToStream2023",
   "description": "A Pyrogram Telegram bot to Stream And Download.",
   "keywords": [
       "telegram",
@@ -13,10 +13,10 @@
       "media",
       "bot"
     ],
-  "repository": "https://github.com/DX-MODS/DxStreamerBot",
+  "repository": "https://github.com/RajbharSaheb/FileToStream2023",
   "success_url": "/",
-  "logo": "https://telegra.ph/file/93382b91fe810ba981de8.jpg",
-  "website": "http://t.me/dxziyan",
+  "logo": "https://graph.org/file/ea418cc5fc869fe3b65f0.jpg",
+  "website": "http://t.me/rajbharbotz",
   "env": {
       "ENV": {
           "description": "Set this to True if you don't want to crash the bot",
